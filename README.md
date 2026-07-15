@@ -32,8 +32,12 @@ Shared logic — loading games, initializing teams, detecting season changes —
 ### v3/v4 — Train/Test Framework & Automated Tuning (`cfbModelFramework.py`, `experiments.py`)
 `cfbModelFramework.py` extends the shared library with train/test awareness — `loadGames` can filter to a specific year range, and `initializeTeams` either trains fresh ratings or carries a team's previously trained strength/variance into a test period, with a cold-start fallback for teams with no training history. `experiments.py` uses this framework together with `scipy.optimize.minimize` (Nelder-Mead) to automatically search for the best values of the model's four hyperparameters (`gamma`, `R_var`, `Q_week`, `Q_offseason`) — training on one span of seasons and minimizing error on a later one, replacing manual trial-and-error tuning.
 
-### v5 — Final Model (`___`)
-*(fill in — this is the version the results below are drawn from)*
+### v5 — Complete Model
+Combines the features of the previous models, including Elo-style rating, HFA, and Kalman filtering, while using sci-kit learn and Numpy to improve the optimization of hyperparameters used by the model. 
+
+### Future Models
+Model foundation features, such lowering the influence of trash points (excessive points won in a blowout), evaluating injuries and other absences, and accounting for unique rival or high-stakes games, are coming soon.
+In later models, the hyperparameters were updated and optimized in such a way that the proportion of correctly predicted game outcomes (on a win/lose basis). Future models (in progress), will update team strengths similarly, but will also optimize hyperparameters to minimize error in predicted margins.
 
 ---
 
@@ -45,13 +49,9 @@ Results below reflect the final model (v5), evaluated on the **2024–2025 seaso
 
 ### Example: National Championship Prediction
 
-| Source | Prediction |
-|------|------|
-| **This Model** | Under |
-| ESPN | Over |
-| Actual Result | Under |
-
-**Predicted Spread:** `___` *(fill in)*
+**ESPN Predicted Spread** `7.5`
+**Predicted Spread:** `4.1`
+**True Game Spread** `6`
 
 ---
 
@@ -79,4 +79,5 @@ Results below reflect the final model (v5), evaluated on the **2024–2025 seaso
 - Python
 - pandas
 - SciPy (`scipy.optimize.minimize`, Nelder-Mead) for hyperparameter search
-- ___ *(anything else v5 relies on that isn't listed above — e.g. NumPy, scikit-learn)*
+- NumPy
+- sci-kit learn
