@@ -55,25 +55,6 @@ Results below reflect the final model (v5), evaluated on the **2024–2025 seaso
 
 ---
 
-## Repository Structure
-
-```
-.
-├── README.md
-├── games.csv               # collected game data (1990–2026 seasons)
-├── conditioner.py           # pulls & filters data from the CFBD API into games.csv
-├── projector_v0.py          # v0 — baseline rating system
-├── projector_v1.py          # v1 — adds home-field advantage + season decay
-├── projector_v2.py          # v2 — Kalman-filtered ratings
-├── cfb_predictor_lib.py     # shared helper functions used by v2
-├── cfbModelFramework.py     # v3/v4 — train/test-aware framework
-├── cfbModel.py               # train()/test() logic used by experiments.py
-├── experiments.py           # v3/v4 — automated hyperparameter search
-└── ___                       # v5 — final model (fill in filename)
-```
-
----
-
 ## Tools Used
 
 - Python
