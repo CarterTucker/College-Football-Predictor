@@ -1,0 +1,9 @@
+Add L2 regularization
+Change the loss function to involve strength (as Claude suggested)
+Find the season start date and weight games with weeks since Week 1
+Use sigmoid transformations on margins
+
+Define a function for the loss function
+Use center difference approximation for the gradient of the loss function
+-> I assume I'll know the parameters I need to plug involve
+

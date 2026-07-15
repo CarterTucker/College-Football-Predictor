@@ -24902,3 +24902,4 @@ startDate,season,seasonType,neutralSite,conferenceGame,venueId,homeTeam,homeId,h
 2026-01-03T01:00:00.000Z,2025,postseason,True,False,7311.0,SMU,2567,"[14, 10, 0, 0]",Arizona,12,"[0, 0, 6, 13]",5
 2026-01-09T00:30:00.000Z,2025,postseason,True,False,3970.0,Ole Miss,145,"[0, 13, 3, 11]",Miami,2390,"[3, 14, 0, 14]",-4
 2026-01-10T00:30:00.000Z,2025,postseason,True,False,5348.0,Indiana,84,"[14, 21, 7, 14]",Oregon,2483,"[7, 0, 8, 7]",34
+2026-01-20T00:30:00.000Z,2025,postseason,False,False,3948.0,Indiana,84,,Miami,2390,,0
