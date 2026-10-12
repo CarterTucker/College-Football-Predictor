@@ -2,11 +2,11 @@ import cfbModel
 from scipy.optimize import minimize
 
 
-trainYears = [2015, 2023]
+trainYears = [2015, 2024]
 testYears = [trainYears[1]+1, 2025]
 bounds = [(1e-6, 1e-4),
-          (50, 500),
-          (0.01, 3),
+          (10, 500),
+          (0.01, 4),
           (10, 100)]
 
 
